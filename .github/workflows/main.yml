@@ -10,7 +10,7 @@ jobs:
       - name: Checkout SporeModder-FX
         uses: actions/checkout@v4
         with:
-          repository: emd4600/SporeModder-FX
+          repository: Spore-Community/SporeModder-FX
           fetch-depth: 0
 
       - name: Calculate release version
@@ -47,7 +47,7 @@ jobs:
       - name: Checkout Updater
         uses: actions/checkout@v4
         with:
-          repository: emd4600/SporeModder-FX-Updater
+          repository: Spore-Community/SporeModder-FX-Updater
           ref: main
 
       #- name: Build Updater
@@ -56,7 +56,7 @@ jobs:
       #    NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Checkout SporeModder-FX
-        run: git clone https://github.com/emd4600/SporeModder-FX SporeModder-FX
+        run: git clone https://github.com/Spore-Community/SporeModder-FX SporeModder-FX
 
       - name: Update reg_file.txt
         run: |
@@ -99,7 +99,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           #git config user.name github-actions
           #git config user.email github-actions@github.com
-          #git remote set-url origin git@github.com:emd4600/SporeModder-FX-Updater
+          #git remote set-url origin git@github.com:Spore-Community/SporeModder-FX-Updater
           git add --all "SporeModder FX"
           git add -f "SporeModder FX/SporeModderFX.jar"
           git add src/sporemodder/updater/resources/reg_file.txt
